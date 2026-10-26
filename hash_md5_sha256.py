@@ -1,0 +1,10 @@
+import hashlib
+msg = input("Enter the message : ")
+binary_msg = msg.encode('utf-8')
+md5 = hashlib.md5(binary_msg).hexdigest()
+sha256 = hashlib.sha256(binary_msg).hexdigest()
+sha1 = hashlib.sha1(binary_msg).hexdigest()
+print("Original message : ",msg)
+print("MD5 Hash : ",md5)
+print("SHA256 Hash : ",sha256)
+print("SHA1 Hash : ",sha1)
