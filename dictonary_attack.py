@@ -1,9 +1,11 @@
 import getpass
-common_password = ["admin", "qwerty", "password", "12345", "welcome", "hello"]
 password = getpass.getpass("Enter password : ")
-if password in common_password:
-    print("Password found in common password list that is used by hackers!")
-    print("Your password is too weak and can get easily hacked!")
+common_password = ["qwerty", "12345", "password", "admin", "hello", "bye", "welcome", "1234567890"]
+for pw in common_password:
+    print("Trying : ",pw)
+    if pw == password:
+        print("Password cracked:", pw)
+        print(f" '{password}' present in the common password list.")
+        break
 else:
-    print("Your password is unique!")
-    print("Password always should be unique, long and non-hackable!")
+    print("Password not found!")
